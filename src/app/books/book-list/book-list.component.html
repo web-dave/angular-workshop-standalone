@@ -1,6 +1,4 @@
+{{ selectedBook?.title }}
 @for (book of books; track $index) {
-<div class="book">
-  <strong>{{ book.title }}</strong> <br />
-  <small>{{ book.subtitle }}</small>
-</div>
+<app-book-preview [book]="book" (bookselected)="bookisSelected($event)" />
 }
