@@ -2,11 +2,12 @@ import { Component, inject, OnInit } from '@angular/core';
 import { IBook } from '../models/book.interface';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { BookService } from '../book.service';
+import { PagesPipe } from '../pages.pipe';
 
 @Component({
   selector: 'app-book-details',
   standalone: true,
-  imports: [RouterLink],
+  imports: [RouterLink, PagesPipe],
   templateUrl: './book-details.component.html',
   styleUrl: './book-details.component.scss',
 })

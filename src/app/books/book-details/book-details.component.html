@@ -1,5 +1,8 @@
 <h3>{{ book?.title }}</h3>
 <h4>{{ book?.subtitle }}</h4>
-<p>{{ book?.abstract }}</p>
+<p>
+  {{ book?.abstract }}
+  <span>{{ book?.numPages | pages : "Seiten hat das Buch" }}</span>
+</p>
 <img [src]="book?.cover" [alt]="book?.title" />
 <a routerLink="..">Back</a>
