@@ -8,11 +8,9 @@ import { BookService } from '../book.service';
   templateUrl: './book-list.component.html',
   styleUrl: './book-list.component.scss',
 })
-export class BookListComponent implements OnInit {
+export class BookListComponent {
   books: any[] = [];
-  service = inject(BookService);
-
-  ngOnInit(): void {
-    this.service.getAll().subscribe((data) => (this.books = data));
-  }
+  gebAllBooksSub = inject(BookService)
+    .getAll()
+    .subscribe((data) => (this.books = data));
 }
