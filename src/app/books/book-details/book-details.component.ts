@@ -3,11 +3,12 @@ import { IBook } from '../models/book.interface';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { BookService } from '../book.service';
 import { PagesPipe } from '../pages.pipe';
+import { OrderBtnDirective } from '../order-btn.directive';
 
 @Component({
   selector: 'app-book-details',
   standalone: true,
-  imports: [RouterLink, PagesPipe],
+  imports: [RouterLink, PagesPipe, OrderBtnDirective],
   templateUrl: './book-details.component.html',
   styleUrl: './book-details.component.scss',
 })
@@ -22,5 +23,9 @@ export class BookDetailsComponent implements OnInit {
       const isbn: string = params['isbn'];
       this.service.getOne(isbn).subscribe((data) => (this.book = data));
     });
+  }
+
+  bitteKaufMich(s: string) {
+    console.log(s);
   }
 }
