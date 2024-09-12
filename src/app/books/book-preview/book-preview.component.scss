@@ -1,5 +1,11 @@
 @import "../../../util";
 
+:host {
+  display: block;
+  margin: 20px auto;
+  max-width: 80%;
+}
+
 .book {
   @include object(100%, 60px, $aqua);
   border-radius: 90px;
