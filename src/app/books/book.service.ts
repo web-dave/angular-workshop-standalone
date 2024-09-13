@@ -18,4 +18,8 @@ export class BookService {
   getOne(isbn: string): Observable<IBook> {
     return this.http.get<IBook>(this.url + '/' + isbn);
   }
+
+  updateOne(isbn: string, book: IBook) {
+    return this.http.put<IBook>(this.url + '/' + isbn, book);
+  }
 }
