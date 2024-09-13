@@ -1,4 +1,5 @@
 {{ selectedBook?.title }}
+<a routerLink="new">NEW</a>
 @for (book of books; track $index) {
 <app-book-preview [book]="book" (bookselected)="bookisSelected($event)" />
 }

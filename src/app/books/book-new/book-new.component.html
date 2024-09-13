@@ -1,0 +1,13 @@
+<form [formGroup]="newBookForm" (ngSubmit)="save()">
+  @for(key of formKeys;track key){
+  <div>
+    <label [for]="key">{{ key }}</label>
+    @if(key === 'numPages'){
+    <input type="number" [name]="key" [id]="key" [formControlName]="key" />
+    } @else {
+    <input type="text" [name]="key" [id]="key" [formControlName]="key" />
+    }
+  </div>
+  }
+  <button type="submit" [disabled]="!newBookForm.valid">Save</button>
+</form>

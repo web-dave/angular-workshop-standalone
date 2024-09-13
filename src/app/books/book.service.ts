@@ -22,4 +22,8 @@ export class BookService {
   updateOne(isbn: string, book: IBook) {
     return this.http.put<IBook>(this.url + '/' + isbn, book);
   }
+
+  createOne(book: IBook) {
+    return this.http.post<IBook>(this.url, book);
+  }
 }
