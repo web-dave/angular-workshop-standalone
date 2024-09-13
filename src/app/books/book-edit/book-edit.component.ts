@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, NgForm } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { BookService } from '../book.service';
 import { IBook } from '../models/book.interface';
@@ -26,7 +26,8 @@ export class BookEditComponent {
     });
   }
 
-  save() {
+  save(form: NgForm) {
+    console.log(form);
     const book = this.book as IBook;
 
     this.service

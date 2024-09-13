@@ -1,5 +1,5 @@
 @if(book){
-<form #editForm="ngForm" (ngSubmit)="save()">
+<form #editForm="ngForm" (ngSubmit)="save(editForm)">
   <div class="form-group">
     <label for="title">Title</label>
     <input
