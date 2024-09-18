@@ -1,0 +1,29 @@
+/*** Mixins ***/
+
+@mixin object($width, $height, $bg) {
+  width: $width;
+  height: $height;
+  background: $bg;
+}
+@mixin transPos($top, $right, $bottom, $left, $transX, $transY) {
+  position: absolute;
+  top: $top;
+  left: $left;
+  right: $right;
+  bottom: $bottom;
+  transform: translate($transX, $transY);
+}
+
+/*** Centering Hack ***/
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*** Color Variables ***/
+$bg: #5661f2;
+$nav-bg: #46b2f0;
+$pink: #fa6c98;
+$aqua: #79edfc;
+$accent: #fff;
