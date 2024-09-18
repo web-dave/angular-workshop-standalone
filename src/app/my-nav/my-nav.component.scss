@@ -6,6 +6,10 @@ header {
   display: flex;
 }
 
+a.active {
+  color: hotpink;
+}
+
 /*** Navigation Styles ***/
 nav {
   @include object(100vw, 160px, $nav-bg);
