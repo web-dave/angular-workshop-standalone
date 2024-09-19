@@ -1,0 +1,9 @@
+@import "../../../utils";
+
+.book {
+  @include object(100%, 60px, $aqua);
+  border-radius: 90px;
+  margin-top: 10px;
+  padding-left: 45px;
+  padding-top: 10px;
+}
