@@ -8,6 +8,6 @@ export class BookService {
   http = inject(HttpClient);
 
   getAll() {
-    this.http.get('http://localhost:4730/books');
+    return this.http.get('http://localhost:4730/books');
   }
 }

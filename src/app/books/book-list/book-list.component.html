@@ -1,1 +1,6 @@
-<p>book-list works!</p>
+@for(book of books; track $index){
+<div>
+  <strong>{{ book.title }}</strong>
+  <small>{{ book.subtitle }}</small>
+</div>
+}
