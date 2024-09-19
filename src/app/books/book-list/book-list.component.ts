@@ -17,7 +17,7 @@ export class BookListComponent implements OnInit {
     this.service.getAll().subscribe((data) => (this.books = data));
   }
 
-  goTo(e: any) {
+  goTo(e: IBook) {
     console.table(e);
   }
 }

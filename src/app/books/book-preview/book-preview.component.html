@@ -1,4 +1,6 @@
 <div class="book">
-  <strong>{{ book?.title }}</strong> <br />
-  <small>{{ book?.subtitle }}</small> <button (click)="go()">go</button>
+  @if(book){
+  <strong>{{ book.title }}</strong> <br />
+  <small>{{ book.subtitle }}</small> <button (click)="go()">go</button>
+  }
 </div>
