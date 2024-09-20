@@ -1,0 +1,12 @@
+@if(book){
+<h3>{{ book.title }}</h3>
+<h4>{{ book.subtitle }}</h4>
+<p>
+  {{ book.abstract }} <span>{{ book.author }}</span>
+  <br />
+  <small>{{ book.numPages }}</small>
+</p>
+<img [src]="book.cover" [alt]="book.title" />
+
+<button routerLink="..">back</button>
+}

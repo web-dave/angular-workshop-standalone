@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, inject } from '@angular/core';
+import { ActivatedRoute, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-books',
@@ -8,4 +8,6 @@ import { RouterOutlet } from '@angular/router';
   templateUrl: './books.component.html',
   styleUrl: './books.component.scss',
 })
-export class BooksComponent {}
+export class BooksComponent {
+  route = inject(ActivatedRoute);
+}

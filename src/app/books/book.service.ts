@@ -11,4 +11,8 @@ export class BookService {
   getAll() {
     return this.http.get<IBook[]>('http://localhost:4730/books');
   }
+
+  getOne(isbn: string) {
+    return this.http.get<IBook>('http://localhost:4730/books/' + isbn);
+  }
 }
