@@ -1,0 +1,25 @@
+<h4>Edit</h4>
+@if(book){
+<form #bookEditForm="ngForm" (ngSubmit)="saveBook()">
+  <label for="title">Title</label><br />
+  <input
+    [(ngModel)]="book.title"
+    type="text"
+    name="title"
+    id="title"
+    required
+  />
+  <br />
+  <br />
+  <textarea
+    [(ngModel)]="book.abstract"
+    name="abstract"
+    id="abstract"
+    required
+  ></textarea>
+
+  <button [disabled]="!bookEditForm.valid" type="submit">Save</button>
+  <pre>{{ bookEditForm.value | json }}</pre>
+  <pre>{{ book | json }}</pre>
+</form>
+}

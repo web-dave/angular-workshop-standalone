@@ -1,3 +1,8 @@
+<form>
+  <input name="foo" id="foo" type="text" required />
+  <button type="submit">Send</button>
+</form>
+
 @if(book){
 <!-- <pre>{{ book | json }}</pre> -->
 
@@ -12,5 +17,6 @@
 </p>
 <img [src]="book.cover" [alt]="book.title" />
 
+<button routerLink="edit">Edit</button>
 <button routerLink="..">back</button>
 }

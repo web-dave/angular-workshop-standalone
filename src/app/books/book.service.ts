@@ -15,4 +15,11 @@ export class BookService {
   getOne(isbn: string) {
     return this.http.get<IBook>('http://localhost:4730/books/' + isbn);
   }
+
+  updateOne(book: IBook) {
+    return this.http.put<IBook>(
+      'http://localhost:4730/books/' + book.isbn,
+      book
+    );
+  }
 }

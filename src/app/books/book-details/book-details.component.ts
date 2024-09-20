@@ -11,11 +11,12 @@ import { ActivatedRoute, RouterLink } from '@angular/router';
 import { IBook } from '../book.interface';
 import { JsonPipe } from '@angular/common';
 import { PagesPipe } from '../pages.pipe';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-book-details',
   standalone: true,
-  imports: [RouterLink, JsonPipe, PagesPipe],
+  imports: [RouterLink, JsonPipe, PagesPipe, FormsModule],
   templateUrl: './book-details.component.html',
   styleUrl: './book-details.component.scss',
 })
