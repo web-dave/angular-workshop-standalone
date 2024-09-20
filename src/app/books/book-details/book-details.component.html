@@ -8,7 +8,7 @@
 <p>
   {{ book.abstract }} <span>{{ book.author }}</span>
   <br />
-  <small>{{ book.numPages }}</small>
+  <small>{{ book | pages : "Seitenzahl:" }}</small>
 </p>
 <img [src]="book.cover" [alt]="book.title" />
 
