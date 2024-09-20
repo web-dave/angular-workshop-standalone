@@ -1,3 +1,4 @@
+<a routerLink="new">NEW</a>
 @for(book of books; track $index){
 <app-book-preview (bookSelected)="goTo($event)" [book]="book" />
 }

@@ -22,4 +22,8 @@ export class BookService {
       book
     );
   }
+
+  createOne(book: IBook) {
+    return this.http.post<IBook>('http://localhost:4730/books/', book);
+  }
 }

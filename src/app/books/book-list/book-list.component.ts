@@ -2,12 +2,12 @@ import { Component, inject, OnInit } from '@angular/core';
 import { BookService } from '../book.service';
 import { BookPreviewComponent } from '../book-preview/book-preview.component';
 import { IBook } from '../book.interface';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-book-list',
   standalone: true,
-  imports: [BookPreviewComponent],
+  imports: [BookPreviewComponent, RouterLink],
   templateUrl: './book-list.component.html',
   styleUrl: './book-list.component.scss',
 })

@@ -1,0 +1,7 @@
+<form [formGroup]="newBookForm" (ngSubmit)="saveBook()">
+  <label for="title">Title</label><br />
+  <input type="text" formControlName="title" /><br /><br />
+  <label for="isbn">isbn</label><br />
+  <input type="text" formControlName="isbn" /><br /><br />
+  <button type="submit">Save</button>
+</form>
